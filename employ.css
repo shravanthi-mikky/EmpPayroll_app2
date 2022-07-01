@@ -17,6 +17,7 @@ background: white ;
     justify-content: center;
     align-items: center;
     border: 0px solid green;
+    background-color: azure;
 }
 .header
 {
@@ -47,4 +48,22 @@ letter-spacing: 0px;
 .emp-payroll
 {
 color:#1d76c9
+}
+
+.header-content
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    font-weight:600;
+    color: grey;
+    background-color: beige;
+}
+.Add-User
+{
+    margin-left: 1000px;
+    padding: 10px;
+    background-color: green;
+    border: none;
 }
