@@ -5,6 +5,7 @@
     box-sizing: border-box;  
 }
 
+
 .Header
 {
 padding: 15px 0;
@@ -77,8 +78,7 @@ color:#1d76c9
 
 td,th {
     text-align: left ;
-    padding: 5px;
-    
+    padding: 5px;   
 }
 
 
@@ -98,19 +98,16 @@ td{
     height: 10%;
     width: 10%;
     margin: 10px;
-
 }
 .delete{
     border-radius: 8px;
     height: 11%;
     width: 11%;
     margin: 8px;
-
 }
 .profile{
     height: 20%;
     width: 20%;
-
 }
 td{
     box-sizing: border-box;
@@ -121,6 +118,7 @@ td{
 td img{
     cursor: pointer;
 }
+
 .dept-label{
     font: italic small-caps bold 18px/24px georgia, serif;
     background-color: #e9fea5;
@@ -131,5 +129,4 @@ td img{
     font-size: 10px;
     display: inline-block;
     margin-bottom: 8px;
-
 }
