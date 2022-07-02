@@ -63,7 +63,7 @@ color:#1d76c9
 }
 .Add-User
 {
-    margin-left: 1000px;
+    margin-left:950px;
     padding: 10px;
     background-color: green;
     border: none;
@@ -72,7 +72,6 @@ color:#1d76c9
 .table
 {
     width: 100%;
-    padding: 5px 0px 0px 0px;
     border-spacing: 0px;
 }
 
@@ -85,48 +84,78 @@ td,th {
 th{
     background-color:#42515f ;
     border-radius: 0px;
-    text-align: left;
     color: white;
     padding: 10px 60px ;
 }
 td{
     color: #3d3d3d;
-    background-color: #77b6f1;
-    padding: 2px;
+    background-color: #c0dcf8;
+    padding: 5px;
 }
 .Icon{
     height: 10%;
     width: 10%;
-    margin: 10px;
+    margin: 5px;
 }
 .delete{
     border-radius: 8px;
     height: 11%;
     width: 11%;
-    margin: 8px;
+    margin: 5px;
 }
 .profile{
-    height: 20%;
-    width: 20%;
+    height: 25%;
+    width: 25%;
+    border-radius:70px;
 }
 td{
     box-sizing: border-box;
     text-align: center;
-    font: italic small-caps bold 18px/24px georgia, serif;
+    font: 18px/24px georgia, serif;
 }
 
 td img{
     cursor: pointer;
 }
-
 .dept-label{
-    font: italic small-caps bold 18px/24px georgia, serif;
+    font: italic small-caps bold 18px/24px;
+    font-family:georgia, serif;
     background-color: #e9fea5;
-    border-radius: 50%;
+    border-radius: 25%;
     width:auto;
     padding: 1px 7px;
     text-align: center;
     font-size: 10px;
     display: inline-block;
+    margin-left:5px;
     margin-bottom: 8px;
+}
+.main{
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    th{
+        background-color:#42515f ;
+        border-radius: 0px;
+        text-align: left;
+        color: white;
+        padding: 10px 20px ;
+    }
+    .Add-User
+{
+    margin-left: 400px;
+    padding: 10px;
+    background-color: green;
+    border: none;
+}
+
+.Icon{
+    padding:2px;
+    display:flex;
+    flex-direction:row;
+    height:25%;
+    width:25%;
+    margin:2px;
+}
 }

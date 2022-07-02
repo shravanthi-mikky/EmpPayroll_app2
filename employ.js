@@ -70,7 +70,7 @@ const createInnerHtml = () => {
     `;
     document.querySelector('#table-display').innerHTML = innerHtml;
 }
-*/
+
 //UC5
 
 window.addEventListener('DOMContentLoaded', (Event) =>{
@@ -80,8 +80,7 @@ window.addEventListener('DOMContentLoaded', (Event) =>{
 const createInnerHtml = () => {
     const headerHtml = "<th>Profile</th><th><pre >Name</pre></th><th>Gender</th><th>Department</th><th>Salary</th><th>startDate</th><th>Action</th>";              
     let empPayrollData = createEmployeePayrollJSON()[0];                                   
-    const innerHtml = `${headerHtml}
-                       
+    const innerHtml = `${headerHtml} 
                 <tr>
                     <td><img class="profile" alt="" src="${empPayrollData._profile}"></td>
                     <td>${empPayrollData._name} </td>
@@ -115,6 +114,73 @@ const createEmployeePayrollJSON =() => {
             _StartDate: '10-04-2022',
             _note:'',
             _profile: 'image/profile1.jpg'
+        }
+    ];
+    return empPayrollListLocal;
+}
+*/
+//uc5 adding multiple emloyee details to table from JSON
+
+window.addEventListener('DOMContentLoaded', (Event) =>{
+    createInnerHtml();
+});
+
+const createInnerHtml = () => {
+    const headerHtml = "<th>Profile</th><th><pre >Name</pre></th><th>Gender</th><th>Department</th><th>Salary</th><th>startDate</th><th>Action</th>";              
+    let innerHtml = `${headerHtml}`;
+    let empPayrollList = createEmployeePayrollJSON();                                   
+    for (const empPayrollData of empPayrollList)
+    {
+        innerHtml = `${innerHtml}
+        <tr class="row" >
+                    <td><img class="profile" alt="" src="${empPayrollData._profile}"></td>
+                    <td>${empPayrollData._name} </td>
+                    <td>${empPayrollData._Gender}</td>
+                    <td class="department">${getDeptHtml(empPayrollData._department)}</td>
+                 
+                    <td>${empPayrollData._Salary}</td>
+                    <td>${empPayrollData._StartDate}</td>
+                    <td>
+                        <img name = "delete" class = "Icon delete" onclick="remove(this)" alt="delete"
+                            src="image/deleteicon.jpg">
+                        <img name = "edit" class = "Icon" alt="edit" onclick="update(this)" alt="edit"
+                            src="image/edit-Icon.png">
+                    </td>         
+                </tr>        
+    `;
+    }
+    document.querySelector('#table-display').innerHTML = innerHtml;
+}
+const getDeptHtml=(deptList)=>{
+let deptHtml='';
+for(const dept of deptList){
+    deptHtml=`${deptHtml}<div class='dept-label'>${dept}</div>`;
+}
+return deptHtml;
+}
+const createEmployeePayrollJSON =() => {
+    let empPayrollListLocal = [
+        {
+            _name: 'Mickey',
+            _Gender:'Female',
+            _department: [
+                'Sales','HR','Finance'
+            ],
+            _Salary: '30000',
+            _StartDate: '10-04-2022',
+            _note:'',
+            _profile: 'image/profile1.jpg'
+        },
+        {
+            _name: 'Abc',
+            _Gender:'Male',
+            _department: [
+                'Sales','HR','Finance'
+            ],
+            _Salary: '30000',
+            _StartDate: '10-04-2022',
+            _note:'',
+            _profile: 'image/profile2.jpg'
         }
     ];
     return empPayrollListLocal;
